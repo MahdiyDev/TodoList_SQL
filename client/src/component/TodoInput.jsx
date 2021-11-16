@@ -8,7 +8,7 @@ function TodoInput() {
         const body = { des: todo }
 
         try {
-            await fetch('http://192.168.0.104:4400/todos', {
+            await fetch('http://localhost:4400/todos', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'

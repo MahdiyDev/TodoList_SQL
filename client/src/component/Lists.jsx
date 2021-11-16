@@ -6,7 +6,7 @@ function Lists() {
 
     const getTodo = async () => {
         try {
-            const response = await fetch("http://192.168.0.104:4400/todos")
+            const response = await fetch("http://localhost:4400/todos")
             setTodo(await response.json())
         } catch (e) {
             console.log(e);
@@ -16,7 +16,7 @@ function Lists() {
     const deleteTodo = async (e) => {
         const todoId = e.target.id
 
-        await fetch(`http://192.168.0.104:4400/todos/${todoId}`, {
+        await fetch(`http://localhost:4400/todos/${todoId}`, {
             method: "delete"
         })
 
